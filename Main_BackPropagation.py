@@ -9,14 +9,14 @@ matplotlib.use("TkAgg")
 from matplotlib import pyplot as plt
 
 
-bg = import_image("PATH_TO_IMAGE.tif", dims=[850, 1000, 512, 512])
+bg = import_image("C:/Users/e-min/Downloads/Compressed/5.10.99/BG2.png", dims=[1150, 350, 512, 512])
 pph = PreprocessHologram(bit_depth=16, background=bg)
-h = import_image("PATH_TO_IMAGE.tif", dims=[850, 1000, 512, 512], preprocessor=pph)
+h = import_image("C:/Users/e-min/Downloads/Compressed/5.10.99/F1.png", dims=[1150, 350, 512, 512], preprocessor=pph)
 
 obj = h + 0j
-z = -306
 solver = AsSolver(shape=obj.shape, dx=1.12, dy=1.12, wavelength=532e-3)
 
+z = -306
 res_amp = np.abs(solver.reconstruct(obj, z))
 res_phase = unwrap_phase(np.angle(solver.reconstruct(obj, z)))
 
