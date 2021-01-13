@@ -1,17 +1,17 @@
 import numpy as np
 from skimage.restoration import unwrap_phase
-from Processing import AngularSpectrumSolver as AsSolver
-from Utils import PreprocessHologram
-from FileManager import import_image
+from Utils.Processing import AngularSpectrumSolver as AsSolver
+from Utils.DataManager import import_image
+from Utils.Modifiers import ImageToArray, PreprocessHologram
 
 import matplotlib
 matplotlib.use("TkAgg")
 from matplotlib import pyplot as plt
 
-
-bg = import_image("C:/Users/e-min/Downloads/Compressed/5.10.99/BG2.png", dims=[1150, 350, 512, 512])
-pph = PreprocessHologram(bit_depth=16, background=bg)
-h = import_image("C:/Users/e-min/Downloads/Compressed/5.10.99/F1.png", dims=[1150, 350, 512, 512], preprocessor=pph)
+pp1 = ImageToArray(bit_depth=16, channel='gray', crop_window=None, dtype='float32')
+bg = import_image("D:/GoogleDrive_/Colab/Dataset/Custom/tests/baboon.png", preprocessor=pp1)
+pp2 = PreprocessHologram(background=bg)
+h = import_image("D:/GoogleDrive_/Colab/Dataset/Custom/tests/peppers.png", preprocessor=[pp1, pp2])
 
 obj = h + 0j
 solver = AsSolver(shape=obj.shape, dx=1.12, dy=1.12, wavelength=532e-3)

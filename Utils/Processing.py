@@ -30,13 +30,13 @@ class MultiHeightPhaseRecovery:
 		self.solver = solver
 
 	def resolve(self, h_seq, z_values, iterations=20):
-		recovered_h = h_seq[0] * np.exp(1j)
+		recovered_h = h_seq[0] * np.exp(0j)
 
 		for i in range(iterations):
 			print("step:", i)
 
 			for j in range(len(h_seq) - 1):
-				dz = z_values[j+1] - z_values[j]
+				dz = z_values[j + 1] - z_values[j]
 				h = h_seq[j+1]
 				rec = self.solver.reconstruct(recovered_h, dz)
 				phase = np.angle(rec)
