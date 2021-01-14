@@ -1,6 +1,8 @@
 import numpy as np
 from skimage import io
-import tensorflow as tf
+
+# Import / export / convert_type methods.
+
 
 def import_image(path, preprocessor=None):
 	"""
@@ -33,9 +35,7 @@ def import_image_seq(paths, preprocessor=None):
 		imgs.append(img)
 	return imgs
 
-import matplotlib
-matplotlib.use("TkAgg")
-from matplotlib import pyplot as plt
+
 def export_image(img, path, dtype='uint16'):
 	assert dtype in ['uint8', 'uint16']
 	_img = img.copy()
@@ -51,26 +51,3 @@ def export_image(img, path, dtype='uint16'):
 
 	io.imsave(path, _img)
 	print("Image exported to:", path)
-
-
-def convert_to_tensor(ndarray, dtype):
-	if dtype == 'complex64':
-		t = tf.complex(real=tf.convert_to_tensor(ndarray, dtype='float32'),
-							imag=tf.zeros_like(ndarray, dtype='float32'))
-	elif dtype == 'complex128':
-		t = tf.complex(real=tf.convert_to_tensor(ndarray, dtype='float64'),
-							imag=tf.zeros_like(ndarray, dtype='float64'))
-	elif dtype in ['float32', 'float64']:
-		t = tf.convert_to_tensor(ndarray, dtype=dtype)
-	else:
-		raise TypeError(str(dtype) + ' is not supported')
-	return t
-
-
-def convert_to_tensor_seq(seq, dtype):
-	tensor_array = []
-	for img in seq:
-		t = convert_to_tensor(img, dtype)
-		tensor_array.append(t)
-
-	return tensor_array

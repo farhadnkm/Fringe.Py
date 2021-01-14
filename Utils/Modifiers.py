@@ -1,8 +1,9 @@
 import numpy as np
 from skimage import color
+import tensorflow as tf
 
-# Preprocess classes have a 'process()' function which could be passed as a parameter
-# in import_image methods to process images on import
+# Modifiers are classes having a 'process()' function. These functions could be passed as a parameter
+# to import_image methods in DataManager and are called on each image on import
 
 
 class ImageToArray:
@@ -33,7 +34,6 @@ class ImageToArray:
 				pass
 			elif len(np.shape(_img)) == 3:
 				_img = color.rgb2gray(_img)
-				print(np.max(_img))
 			else:
 				raise ValueError('Input array is not an image or its type is not supported.')
 		elif self.chan == 'r':
@@ -69,3 +69,25 @@ class PreprocessHologram:
 		_img -= minh
 		_img /= 1 - minh
 		return _img
+
+
+class ConvertToTensor:
+	def __init__(self, dtype='float32'):
+		"""
+		:param dtype: Data type of the tensor that is supposed to make
+		"""
+		assert dtype in ['float32', 'float64', 'complex64', 'complex128']
+		self.dtype = dtype
+
+	def process(self, img):
+		if self.dtype == self.dtype:
+			t = tf.complex(real=tf.convert_to_tensor(img, dtype='float32'),
+						   imag=tf.zeros_like(img, dtype='float32'))
+		elif self.dtype == 'complex128':
+			t = tf.complex(real=tf.convert_to_tensor(img, dtype='float64'),
+						   imag=tf.zeros_like(img, dtype='float64'))
+		elif self.dtype in ['float32', 'float64']:
+			t = tf.convert_to_tensor(img, dtype=self.dtype)
+		else:
+			raise TypeError(str(self.dtype) + ' is not supported')
+		return t

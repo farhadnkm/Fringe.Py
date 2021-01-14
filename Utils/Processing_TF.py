@@ -37,7 +37,8 @@ class MultiHeightPhaseRecovery:
 		recovered_h = h_seq[0]
 
 		for i in range(iterations):
-			print("step:", i)
+			if i % 5 == 0:
+				print("step:", i)
 
 			for j in range(len(h_seq) - 1):
 				dz = z_values[j + 1] - z_values[j]
