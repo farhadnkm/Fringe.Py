@@ -74,7 +74,7 @@ class PreprocessHologram:
 class ConvertToTensor:
 	def __init__(self, dtype='float32'):
 		"""
-		:param dtype: Data type of the tensor that is supposed to make
+		:param dtype: Data type of the resulting tensor
 		"""
 		assert dtype in ['float32', 'float64', 'complex64', 'complex128']
 		self.dtype = dtype
