@@ -12,14 +12,14 @@ Tensorflow also allows embodying the framework in machine learning models.
 
 ## Outcomes
 
-One of the Holograms:
+A Hologram:
 
 <img src="Images/hologram_preview.png" width="300">
 
-Reconstructed Amplitude and phase images by back propagating a hologram:
+Reconstructed Amplitude and phase images by back propagation:
 
 <img src="Images/Exports/bp_amplitude.png" width="300"> <img src="Images/Exports/bp_phase.png" width="300">
 
-Reconstructed Amplitude and phase images using MHPR method applied on 8 holograms:
+Reconstructed Amplitude and phase images using MHPR method applied on 8 axially displaced holograms:
 
 <img src="Images/Exports/mhpr_amplitude.png" width="300"> <img src="Images/Exports/mhpr_phase.png" width="300">
