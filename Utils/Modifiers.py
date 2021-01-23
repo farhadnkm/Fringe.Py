@@ -37,13 +37,13 @@ class ImageToArray:
 			else:
 				raise ValueError('Input array is not an image or its type is not supported.')
 		elif self.chan == 'r':
-			_img = img[:, :, 0]
+			_img = _img[:, :, 0]
 		elif self.chan == 'g':
-			_img = img[:, :, 1]
+			_img = _img[:, :, 1]
 		elif self.chan == 'b':
-			_img = img[:, :, 2]
+			_img = _img[:, :, 2]
 		elif self.chan == 'rgb':
-			_img = img
+			pass
 
 		if self.crop is not None:
 			x, y, w, h = self.crop
