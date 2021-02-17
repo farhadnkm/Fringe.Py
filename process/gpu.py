@@ -1,5 +1,4 @@
 import numpy as np
-from numpy.fft import fft2, ifft2
 import tensorflow as tf
 
 
@@ -41,8 +40,8 @@ class MultiHeightPhaseRecovery:
 				print("step:", i)
 
 			for j in range(len(h_seq) - 1):
-				dz = z_values[j + 1] - z_values[j]
-				h = h_seq[j+1]
+				dz = z_values[j] - z_values[j + 1]
+				h = h_seq[j + 1]
 				rec = self.solver.reconstruct(recovered_h, dz)
 				phase = tf.exp(tf.complex(real=tf.zeros_like(rec, dtype=self.solver.dtype_f),
 										  imag=tf.math.angle(rec)))
@@ -50,12 +49,12 @@ class MultiHeightPhaseRecovery:
 
 			last_i = len(h_seq) - 1
 			for j in range(len(h_seq) - 1):
-				dz = z_values[last_i - j - 1] - z_values[last_i - j]
+				dz = z_values[last_i - j] - z_values[last_i - j - 1]
 				h = h_seq[last_i - j - 1]
 				rec = self.solver.reconstruct(recovered_h, dz)
 				phase = tf.exp(tf.complex(real=tf.zeros_like(rec, dtype=self.solver.dtype_f),
 										  imag=tf.math.angle(rec)))
 				recovered_h = tf.multiply(h, phase)
 
-		recovered_h = self.solver.reconstruct(recovered_h, -z_values[0])
+		recovered_h = self.solver.reconstruct(recovered_h, z_values[0])
 		return recovered_h
