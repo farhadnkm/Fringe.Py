@@ -1,0 +1,4 @@
+matplotlib==3.3.4
+numpy @ file:///C:/ci/numpy_and_numpy_base_1603466732592/work
+scikit-image==0.18.1
+tensorflow==2.4.1
