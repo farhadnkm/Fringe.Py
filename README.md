@@ -1,4 +1,4 @@
-# Inline Holographic Reconstruction
+# In-line Holographic Reconstruction
 Python implementation of angular spectrum and multi-height phase recovery algorithms to reconstruct digital in-line holograms.
 
 ## What's inside?
