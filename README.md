@@ -15,7 +15,7 @@ $ git clone https://github.com/farhadnkm/Fringe.Py
 ```
 
 ## How to use
-1. Import
+1. Import images
 
 Images must be ndarrays or tensors. A simple i/o functionality for this purpose is integrated inside the package:
 ```
@@ -33,7 +33,7 @@ p2 = PreprocessHologram(background=bg)
 
 hologram = import_image(background_path, preprocessor=[p1, p2])
 ```
-2. Reconstruct
+2. Reconstruct holograms
 
 *Solvers* are reconstruction algorithms having a *solve* function. *solve* functions give hologram(s) and axial distance(s) as input parameters and return a complex-valued reconstructed image.
 ```
@@ -44,7 +44,7 @@ amp = np.abs(solver.solve(hologram, z))
 phase = unwrap_phase(np.angle(solver.solve(hologram, z)))
 ```
 
-3. Export
+3. Export outputs
 ```
 export_image(amp, os.path.join('PATH', 'amplitude.png'), dtype='uint8')
 export_image(phase, os.path.join('PATH', 'phase.png'), dtype='uint8')
