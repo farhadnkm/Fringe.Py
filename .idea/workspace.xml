@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="14316d6c-8e6c-48d9-a86c-ebeed3a3498f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Holographic_Reconstruction.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/scanner.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/simulator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/io.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/modifiers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/images/amplitude.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/images/exports/bp_amplitude.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/images/exports/bp_phase.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/images/exports/mhpr_amplitude.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/images/exports/mhpr_phase.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/images/exports/mhpr_phase_colored.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/images/hologram_preview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/images/phase.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/images/sequence/0_300.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/images/sequence/1_350.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/images/sequence/2_400.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/images/sequence/3_450.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/images/sequence/4_500.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/images/sequence/5_550.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/images/sequence/6_600.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/images/sequence/7_650.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_CPU.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/example_CPU.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_GPU.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/example_GPU.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/.github/ISSUE_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/AUTHORS.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/CONTRIBUTING.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/HISTORY.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/MANIFEST.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/docs/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/docs/authors.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/docs/conf.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/docs/contributing.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/docs/history.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/docs/index.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/docs/installation.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/docs/make.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/docs/readme.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/docs/usage.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/fringe/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/fringe/cli.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/fringe/fringe.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/requirements_dev.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/setup.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/tests/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/tests/test_fringe.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/tox.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/process/cpu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/process/gpu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_cpu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_gpu.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1m6Al4QTm4YzolEzFqrhtzw12nD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Maze Generator" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OneDrive\Python\Holographic_Reconstruction\docs" />
+      <recent name="D:\OneDrive\Python\Holographic_Reconstruction" />
+      <recent name="D:\OneDrive\Python\Holographic_Reconstruction\utils\io" />
+      <recent name="D:\OneDrive\Python\Holographic_Reconstruction\utils" />
+      <recent name="D:\OneDrive\Python\Holographic_Reconstruction\utils\process" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.setup">
+    <configuration name="MHPR_TF" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Holographic_Reconstruction" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MHPR_TF.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Main_BackPropagation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Holographic_Reconstruction" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main_BackPropagation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Main_MHPR" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Holographic_Reconstruction" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main_MHPR.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SimulateHologram" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Holographic_Reconstruction" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SimulateHologram.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="setup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Holographic_Reconstruction" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/setup.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.setup" />
+        <item itemvalue="Python.MHPR_TF" />
+        <item itemvalue="Python.Main_MHPR" />
+        <item itemvalue="Python.SimulateHologram" />
+        <item itemvalue="Python.Main_BackPropagation" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14316d6c-8e6c-48d9-a86c-ebeed3a3498f" name="Default Changelist" comment="" />
+      <created>1608803814342</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608803814342</updated>
+      <workItem from="1608803815827" duration="14554000" />
+      <workItem from="1608819638431" duration="4594000" />
+      <workItem from="1608917305454" duration="10188000" />
+      <workItem from="1609181030081" duration="4350000" />
+      <workItem from="1610186216558" duration="28768000" />
+      <workItem from="1610446243537" duration="4755000" />
+      <workItem from="1610537561166" duration="15319000" />
+      <workItem from="1610611985453" duration="24637000" />
+      <workItem from="1613380252036" duration="29374000" />
+      <workItem from="1613578963022" duration="14800000" />
+      <workItem from="1614250521743" duration="9651000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/Holographic_Reconstruction" />
+    </ignored-roots>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Holographic_Reconstruction$Z_Scan.coverage" NAME="Z_Scan Coverage Results" MODIFIED="1610212755886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Holographic_Reconstruction$Main_MHPR.coverage" NAME="Main_MHPR Coverage Results" MODIFIED="1610450508744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Holographic_Reconstruction$SimulateHologram.coverage" NAME="SimulateHologram Coverage Results" MODIFIED="1610267644595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Fringe$setup.coverage" NAME="setup Coverage Results" MODIFIED="1614261897991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Holographic_Reconstruction$Main.coverage" NAME="Main Coverage Results" MODIFIED="1608810321739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Holographic_Reconstruction$MHPR_TF.coverage" NAME="MHPR_TF Coverage Results" MODIFIED="1610632387723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Holographic_Reconstruction$Main_BackPropagation.coverage" NAME="Main_BackPropagation Coverage Results" MODIFIED="1610213810717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
