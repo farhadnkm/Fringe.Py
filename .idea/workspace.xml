@@ -4,10 +4,8 @@
     <list default="true" id="14316d6c-8e6c-48d9-a86c-ebeed3a3498f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HISTORY.rst" beforeDir="false" afterPath="$PROJECT_DIR$/HISTORY.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example_CPU.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/example_CPU.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example_GPU.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/example_GPU.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements_dev.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/process/gpu.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/process/gpu.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/setup.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
@@ -194,7 +192,7 @@
       <workItem from="1610611985453" duration="24637000" />
       <workItem from="1613380252036" duration="29374000" />
       <workItem from="1613578963022" duration="14800000" />
-      <workItem from="1614250521743" duration="15592000" />
+      <workItem from="1614250521743" duration="17006000" />
     </task>
     <servers />
   </component>

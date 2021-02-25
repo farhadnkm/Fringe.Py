@@ -10,4 +10,8 @@ History
 ------------------
 * Some bugs and errors fixed
 
+0.0.3 (2021-02-25)
+------------------
+* Minor bugs fixed
+
 
