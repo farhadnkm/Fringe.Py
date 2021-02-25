@@ -49,7 +49,7 @@ phase = unwrap_phase(np.angle(solver.solve(hologram, z)))
 export_image(amp, os.path.join('PATH', 'amplitude.png'), dtype='uint8')
 export_image(phase, os.path.join('PATH', 'phase.png'), dtype='uint8')
 ```
-Examples for multi-height phase recovery and gpu processing are included in the example notebooks.
+Examples and further details for multi-height phase recovery and gpu processing are included in the example notebooks.
 
 ## Outcomes
 
