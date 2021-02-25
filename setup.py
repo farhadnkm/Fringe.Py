@@ -9,10 +9,12 @@ with open('README.md') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = ['numpy>=1.16.1', 'tensorflow>=2.0.1', 'scikit_image>=0.10.1', 'matplotlib>=3.0.1']
+with open('requirements.txt') as req_file:
+    requirements = req_file.read()
+
 setup(
     name='fringe',
-    version='0.0.1',
+    version='0.0.2',
     description="Python implementation of holographic image reconstruction algorithms",
     long_description=readme + '\n\n' + history,
     long_description_content_type='text/markdown',
@@ -38,7 +40,7 @@ setup(
     license="MIT license",
     install_requires=requirements,
     setup_requires=['pytest-runner', 'flake8'],
-    tests_require=['pytest'],
+    tests_require=['pytest', 'jupyter'],
     test_suite='tests',
     zip_safe=False,
 )

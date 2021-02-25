@@ -2,70 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14316d6c-8e6c-48d9-a86c-ebeed3a3498f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Holographic_Reconstruction.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/scanner.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/simulator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/io.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/modifiers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/amplitude.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/exports/bp_amplitude.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/exports/bp_phase.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/exports/mhpr_amplitude.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/exports/mhpr_phase.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/exports/mhpr_phase_colored.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/hologram_preview.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/phase.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/sequence/0_300.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/sequence/1_350.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/sequence/2_400.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/sequence/3_450.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/sequence/4_500.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/sequence/5_550.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/sequence/6_600.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/sequence/7_650.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HISTORY.rst" beforeDir="false" afterPath="$PROJECT_DIR$/HISTORY.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example_CPU.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/example_CPU.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example_GPU.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/example_GPU.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/.github/ISSUE_TEMPLATE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/AUTHORS.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/CONTRIBUTING.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/HISTORY.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/MANIFEST.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/README.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/docs/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/docs/authors.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/docs/conf.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/docs/contributing.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/docs/history.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/docs/index.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/docs/installation.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/docs/make.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/docs/readme.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/docs/usage.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/fringe/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/fringe/cli.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/fringe/fringe.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/requirements_dev.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/setup.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/setup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/tests/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/tests/test_fringe.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/tox.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/cpu.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/gpu.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_cpu.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_gpu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements_dev.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/setup.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +41,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -250,7 +194,7 @@
       <workItem from="1610611985453" duration="24637000" />
       <workItem from="1613380252036" duration="29374000" />
       <workItem from="1613578963022" duration="14800000" />
-      <workItem from="1614250521743" duration="9651000" />
+      <workItem from="1614250521743" duration="15592000" />
     </task>
     <servers />
   </component>
