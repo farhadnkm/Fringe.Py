@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="14316d6c-8e6c-48d9-a86c-ebeed3a3498f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HISTORY.rst" beforeDir="false" afterPath="$PROJECT_DIR$/HISTORY.rst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example_GPU.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/example_GPU.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/process/gpu.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/process/gpu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/utils/io.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/utils/io.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/utils/modifiers.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/utils/modifiers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/setup.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
@@ -35,7 +35,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Maze Generator" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../GoogleDrive_/git_repos/DeepDecoderNetwork" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -192,7 +192,7 @@
       <workItem from="1610611985453" duration="24637000" />
       <workItem from="1613380252036" duration="29374000" />
       <workItem from="1613578963022" duration="14800000" />
-      <workItem from="1614250521743" duration="17006000" />
+      <workItem from="1614250521743" duration="29518000" />
     </task>
     <servers />
   </component>
