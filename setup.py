@@ -14,7 +14,7 @@ with open('requirements.txt') as req_file:
 
 setup(
     name='fringe',
-    version='0.0.4',
+    version='0.0.6',
     description="Python implementation of holographic image reconstruction algorithms",
     long_description=readme + '\n\n' + history,
     long_description_content_type='text/markdown',

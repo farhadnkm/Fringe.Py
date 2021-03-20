@@ -27,8 +27,8 @@ class ImageToArray:
             if self.chan in ['r', 'g', 'b', 'rgb']:
                 raise AssertionError('The image is grayscale but your expecting an RGB image.')
 
-        _img = img.astype(self.dtype)
-        _img /= 2 ** self.bd
+        _img = img.astype('float32')
+        _img = _img / (2 ** self.bd - 1)
 
         if self.chan == 'gray':
             if len(np.shape(_img)) == 2:
@@ -50,6 +50,7 @@ class ImageToArray:
             x, y, w, h = self.crop
             _img = _img[y:y + h, x:x + w]
 
+        _img = _img.astype(self.dtype)
         return _img
 
 
