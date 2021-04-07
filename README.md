@@ -7,7 +7,7 @@ This package includes solvers for the holographic reconstruction problem. Comput
 ## Installation
 To install the package, run:
 ```
-pythom -m pip install fringe
+python -m pip install fringe
 ```
 The example files are not included in the package. To import them, clone the repository. In the git bash, run:
 ```
