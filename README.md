@@ -55,12 +55,12 @@ Examples and further details for multi-height phase recovery and gpu processing 
 
 A Hologram:
 
-<img src="images/hologram_preview.png" width="300">
+<img src="examples/images/hologram_preview.png" width="300">
 
 Reconstructed Amplitude and phase images obtained by back propagation:
 
-<img src="images/exports/bp_amplitude.png" width="300"> <img src="images/exports/bp_phase.png" width="300">
+<img src="examples/images/exports/bp_amplitude.png" width="300"> <img src="examples/images/exports/bp_phase.png" width="300">
 
 Reconstructed Amplitude and phase images obtained by MHPR method using 8 axially displaced holograms:
 
-<img src="images/exports/mhpr_amplitude.png" width="300"> <img src="images/exports/mhpr_phase.png" width="300">
+<img src="examples/images/exports/mhpr_amplitude.png" width="300"> <img src="examples/images/exports/mhpr_phase.png" width="300">

@@ -14,8 +14,8 @@ with open('requirements.txt') as req_file:
 
 setup(
     name='fringe',
-    version='0.0.6',
-    description="Python implementation of holographic image reconstruction algorithms",
+    version='1.0.1',
+    description="Python implementation of computational optical propagation and digital holography.",
     long_description=readme + '\n\n' + history,
     long_description_content_type='text/markdown',
     url='https://github.com/farhadnkm/fringe',
@@ -23,7 +23,7 @@ setup(
     author_email='farhad.niknam.em@gmail.com',
     python_requires='>=3.6, <4',
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Science/Research',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3',

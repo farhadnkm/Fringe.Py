@@ -1,13 +1,19 @@
 import numpy as np
 from skimage import color
 import tensorflow as tf
+from abc import abstractmethod
 
-
-# Modifiers are classes having a 'process()' function. These functions could be passed as a parameter
+# Modifiers are classes having a 'solvers()' function. These functions could be passed as a parameter
 # to import_image methods in DataManager and are called on each image on import
 
 
-class ImageToArray:
+class Modifier:
+    @abstractmethod
+    def process(self, input_):
+        raise NotImplementedError
+
+
+class ImageToArray(Modifier):
     def __init__(self, bit_depth=16, channel='gray', crop_window=None, dtype='float32'):
         """
         A preprocess class to convert the input image to a valid array for further processing.
@@ -54,10 +60,10 @@ class ImageToArray:
         return _img
 
 
-class PreprocessHologram:
+class Normalize(Modifier):
     def __init__(self, background=None):
         """
-        A preprocess class to convert the input image to a hologram for further processing and reconstruction.
+        A preprocess class to convert the normalize images based on their background.
         :param background: The background image of the hologram.
         """
         self.bg = background
@@ -65,7 +71,7 @@ class PreprocessHologram:
 
     def process(self, img):
         _img = np.copy(img)
-        if self.bg is not None:  # Normalize
+        if self.bg is not None:
             _img /= self.bg
         minh = np.min(_img)
         _img -= minh
@@ -73,23 +79,79 @@ class PreprocessHologram:
         return _img
 
 
-class ConvertToTensor:
-    def __init__(self, dtype='float32'):
+class MakeComplex(Modifier):
+    def __init__(self, dtype='complex64', set_as='amplitude', **kwargs):
         """
-        :param dtype: Data type of the resulting tensor
-        """
-        assert dtype in ['float32', 'float64', 'complex64', 'complex128']
-        self.dtype = dtype
+        Generates a complex array from the imported image
 
-    def process(self, img):
-        if self.dtype == 'complex64':
-            t = tf.complex(real=tf.convert_to_tensor(img, dtype='float32'),
-                           imag=tf.zeros_like(img, dtype='float32'))
-        elif self.dtype == 'complex128':
-            t = tf.complex(real=tf.convert_to_tensor(img, dtype='float64'),
-                           imag=tf.zeros_like(img, dtype='float64'))
-        elif self.dtype in ['float32', 'float64']:
-            t = tf.convert_to_tensor(img, dtype=self.dtype)
-        else:
-            raise TypeError(str(self.dtype) + ' is not supported')
-        return t
+        Parameters
+        ----------
+        dtype : string
+            Output data type : 'complex64' - 'complex128'. Default is 'complex64'.
+
+        set_as : string
+            Determines whether the imported image take part as 'real', 'imaginary',
+            'amplitude', or 'phase'. Default is 'amplitude'.
+
+        real : float ndarray (Optional)
+            fills real part when image is set as 'imaginary'. Default is 1.
+
+        imaginary : float, ndarray (Optional)
+            fills imaginary part when image is set as 'real'. Default is 0.
+
+        amplitude : float, ndarray (Optional)
+            Overrides amplitude term when image is set as 'phase'. Default is 1.
+
+        phase : float, ndarray (Optional)
+            Overrides phase term when image is set as 'amplitude'. Default is 0.
+
+        phase_coef : float (Optional)
+            phase coefficient. For example, could be set to 2pi to scale up
+            normalized phase to cover full radians. Default is 1.
+        """
+
+        assert dtype in ['complex64', 'complex128']
+        assert set_as in ['real', 'imaginary', 'amplitude', 'phase']
+        self.dtype = dtype
+        self.target = set_as
+        self._imag = kwargs.get('imaginary', 0)
+        self._real = kwargs.get('real', 1)
+        self._ph = kwargs.get('phase', 0)
+        self._amp = kwargs.get('amplitude', 1)
+        self._ph_coef = kwargs.get('phase_coef', 1)
+
+    def process(self, img, *args, **kwargs):
+        if self.target == 'real':
+            return (img + 1j * self._imag).astype(self.dtype)
+
+        elif self.target == 'imaginary':
+            return (self._real + 1j * img).astype(self.dtype)
+
+        elif self.target == 'amplitude':
+            return (img * np.exp(1j * self._ph)).astype(self.dtype)
+
+        elif self.target == 'phase':
+            return (self._amp * np.exp(1j * img * self._ph_coef)).astype(self.dtype)
+
+
+class ConvertToTensor(Modifier):
+    def __init__(self):
+        """
+        Converts imported arrays to tensorflow tensors.
+        """
+        pass
+
+    def process(self, img, *args, **kwargs):
+        return tf.convert_to_tensor(img)
+
+
+class Map(Modifier):
+    def __init__(self, function):
+        """
+        Converts imported arrays to tensorflow tensors.
+        """
+        self.function = function
+        pass
+
+    def process(self, img, *args, **kwargs):
+        return self.function(img, *args, **kwargs)
