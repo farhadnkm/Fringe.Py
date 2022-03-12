@@ -67,6 +67,6 @@ pyplot.show()
 
 Example notebooks provide further details with 1D and 2D diffraction, GPU acceleration, batch processing, and phase recovery.
 
-##License
+## License
 
 Fringe is released under the MIT license. See LICENSE for details.
