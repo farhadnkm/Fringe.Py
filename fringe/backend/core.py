@@ -29,11 +29,6 @@ class CoreFunctions:
 
     @staticmethod
     @abstractmethod
-    def slice(input_, indices):
-        raise NotImplementedError
-
-    @staticmethod
-    @abstractmethod
     def exp(input_):
         raise NotImplementedError
 

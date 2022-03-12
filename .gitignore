@@ -1,5 +1,7 @@
 # Other scripts
 test.py
+propagation_anim.py
+gif_maker.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

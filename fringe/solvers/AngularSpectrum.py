@@ -1,12 +1,12 @@
-import numpy
-from fringe.backend.TensorFlow import TensorFlow
-from fringe.backend.Numpy import Numpy
 from typing import Union
+from ..solvers.base import Solver
+import fringe.backend as bnd
 
+import numpy
 _PI = numpy.pi
 
 
-class AngularSpectrumSolver:
+class AngularSpectrumSolver(Solver):
     def __init__(self, shape, dr: Union[float, tuple, list], is_batched, padding: Union[str, list, None] = None, pad_fill_value=0, backend='TensorFlow'):
         """
         Angular Spectrum Solver class. On initialization, static parameters are defined. To propagate fields, call the
@@ -31,14 +31,18 @@ class AngularSpectrumSolver:
         pad_fill_value : float
             Constant fill value for padding. Default is 0.
 
-        backend : string
-            Computation backend. "tensorflow" and "numpy" are supported.
+        backend : string, class(backend.core.CoreFunctions)
+            Computation backend. "tensorflow" and "numpy" are built in backends. Any custom class inherited
+             from backend.core.CoreFunctions could be compatible as well.
         """
-
-        if backend.lower() == 'tensorflow':
-            self.backend = TensorFlow
-        elif backend.lower() == 'numpy':
-            self.backend = Numpy
+        if isinstance(backend, str):
+            self.backend = {'tensorflow': bnd.TensorFlow.TensorFlow,
+                            'numpy': bnd.Numpy.Numpy}[backend.lower()]
+        elif issubclass(backend, bnd.core.CoreFunctions):
+            self.backend = backend
+        else:
+            raise ValueError("The given backend is not an instance of backend.core.CoreFunctions or is not one of the "
+                             "built-in classes.")
 
         if len(shape) > 2 and not is_batched:
             raise ValueError("More than 2-dimensional data structure is not supported without a batch dimension.")
@@ -49,7 +53,8 @@ class AngularSpectrumSolver:
 
         if type(padding) in (list, tuple):
             if len(padding) != len(shape) - (1 if is_batched else 0):
-                raise ValueError("Padding must have the same length as the data dimensions. For each data dimension (except batch) a pad array must be defined.")
+                raise ValueError("Padding must have the same length as the data dimensions. For each data dimension "
+                                 "(except batch) a pad array must be defined.")
 
         self.pad_fill_value = pad_fill_value
         self.padding = []

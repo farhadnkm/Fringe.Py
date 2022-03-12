@@ -1,4 +1,4 @@
-from fringe.backend.core import CoreFunctions
+from ..backend.core import CoreFunctions
 import tensorflow as tf
 
 
@@ -18,10 +18,6 @@ class TensorFlow(CoreFunctions):
     @staticmethod
     def reduce_sum(input_, axis):
         return tf.reduce_sum(input_, axis=axis)
-
-    @staticmethod
-    def slice(input_, indices):
-        return tf.gather_nd(input_, indices, batch_dims=0)
 
     @staticmethod
     def pad(input_, padding, fill_value):

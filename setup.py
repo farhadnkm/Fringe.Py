@@ -33,8 +33,7 @@ setup(
         'Programming Language :: Python :: 3.9',
         'Topic :: Scientific/Engineering :: Image Processing'
     ],
-    keywords='digital holography, multi-height phase recovery, mhpr,'
-             ' gpu processing, angular spectrum, inline holography',
+    keywords='diffraction, angular spectrum, holography, holograms, phase recovery,',
     #package_dir={'': 'src'},
     packages=find_packages(),
     license="MIT license",

@@ -41,6 +41,7 @@ class ImageToArray(Modifier):
                 pass
             elif len(np.shape(_img)) == 3:
                 _img = color.rgb2gray(_img)
+
             else:
                 raise ValueError('Input array is not an image or its type is not supported.')
         elif self.chan == 'r':

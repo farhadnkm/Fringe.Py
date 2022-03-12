@@ -1,16 +1,17 @@
 
 class MultiDistancePhaseOptimizer:
-    def __init__(self, propagation_solver):
+    def __init__(self, solver):
         """
         Recovers the phase information by multiple intensity-only images captured from different distances.
 
         Parameters
         ----------
-        propagation_solver : object, class instance
-            Optical propagation solver (e.g. Angular Spectrum) class instance.
+        solver : class(solvers.base.Solver)
+            The propagation solver class (e.g., AngularSpectrum) which encapsulates Solver.solve(input_, *args) to
+            apply propagation algorithm on the input field.
         """
-        self.solver = propagation_solver
-        self.backend = propagation_solver.backend
+        self.solver = solver
+        self.backend = solver.backend
 
     def optimize(self, image_seq, k, z_values, iterations=20):
         """

@@ -1,66 +1,64 @@
-# In-line Holographic Reconstruction
-Python implementation of angular spectrum and multi-height phase recovery algorithms to reconstruct digital in-line holograms.
+# Diffraction and Coherent Propagation
+A computational implementation of coherent propagation of complex fields, all written in Python.
 
 ## What's inside?
-This package includes solvers for the holographic reconstruction problem. Computations can be performed on both cpu and gpu. The gpu-accelerated version is programmed on tensorflow and is auto-gradient friendly, thus can be easily employed on machine learning models.
+In this package, a set of utilities are provided to simulate coherent signal propagation and diffraction. It is particularly made for free-space optical propagation and holography. However, the tools are compatible with 1D and 2D data structures and can be potentially used for any sort of spatially-coherent signals.
+
+It is intended to be modular and simple to understand. The codes are GPU-friendly, and they support batch processing. Angular spectrum algorithm is the primary work horse for signal propagtion though any custom solver could be given. Aside Numpy and TensorFlow backends which are provided with the package, any computational means could be implemented to process tensor operations.
+
+It also includes:
+- a simple yet useful data pipeline which supports images only.
+- Gerchberg-Saxton multi-distance phase recovery algorithm. It can be easily tweaked to support other variations of signal e.g. wavelength.
 
 ## Installation
 To install the package, run:
 ```
-pythom -m pip install fringe
+python -m pip install fringe
 ```
-The example files are not included in the package. To import them, clone the repository. In the git bash, run:
-```
-$ git clone https://github.com/farhadnkm/Fringe.Py
-```
+The example files are not included in the package and should be downloaded separately. Also they require *matplotlib* to show plots.
 
-## How to use
-1. Import images
+## How to Use
+1. Import or create data
 
-Images must be ndarrays or tensors. A simple i/o functionality for this purpose is integrated inside the package:
+For images:
 ```
-from fringe.utils.io import import_image, import_image_seq, export_image
-from fringe.utils.modifiers import ImageToArray, PreprocessHologram, ConvertToTensor
+import numpy as np
+from fringe.utils.io import import_image
+from fringe.utils.modifiers import ImageToArray, Normalize, MakeComplex
 ```
-*Modifiers* are preprocessing classes. These classes have a *process* method which is called by the import functions on any image import and returns the processed image.
+Images need to be standardized, normalized, and casted to complex data type. *Modifiers* are tools made for this purpose which apply these operations on import.
 ```
-image_path = 'IMAGE_PATH.tif'
-background_path = 'BACKGROUND_PATH.tif'
-
 p1 = ImageToArray(bit_depth=16, channel='gray', crop_window=None, dtype='float32')
-bg = import_image(background_path, preprocessor=p1)
-p2 = PreprocessHologram(background=bg)
+p2 = Normalize(background=np.ones((512, 512)))
+p3 = MakeComplex(set_as='amplitude', phase=0)
 
-hologram = import_image(background_path, preprocessor=[p1, p2])
+obj = import_image("images/squares.png", preprocessor=[p1, p2, p3])
 ```
-2. Reconstruct holograms
+2. Propagate
 
-*Solvers* are reconstruction algorithms having a *solve* function. *solve* functions give hologram(s) and axial distance(s) as input parameters and return a complex-valued reconstructed image.
+*Solvers* contain propagation algorithms and can be called by *solver.solve*. In particular, angular Spectrum algorithm convolves the input field with a free-space propagtor function which depends on *wavelength λ* (or *wavenumber k=2π/λ*) and distance *z*.
 ```
-solver = AsSolver(shape=h.shape, dx=1.12, dy=1.12, wavelength=532e-3)
-z = -300
+from fringe.solvers.AngularSpectrum import AngularSpectrumSolver as AsSolver
 
-amp = np.abs(solver.solve(hologram, z))
-phase = unwrap_phase(np.angle(solver.solve(hologram, z)))
+solver = AsSolver(shape=obj.shape, dr=1, is_batched=False, padding="same", pad_fill_value=0, backend="Numpy")
+rec = solver.solve(hologram, k=2*np.pi/500e-3, z=-300)
+amp, phase = np.abs(rec), np.angle(rec)
 ```
 
-3. Export outputs
-```
-export_image(amp, os.path.join('PATH', 'amplitude.png'), dtype='uint8')
-export_image(phase, os.path.join('PATH', 'phase.png'), dtype='uint8')
-```
-Examples and further details for multi-height phase recovery and gpu processing are included in the example notebooks.
+
+
+Example notebooks provide further details with 1D and 2D signal propagtion, GPU acceleration and batch processing, and phase recovery.
 
 ## Outcomes
 
 A Hologram:
 
-<img src="examples/images/hologram_preview.png" width="300">
+<img src="images/hologram_preview.png" width="300">
 
 Reconstructed Amplitude and phase images obtained by back propagation:
 
-<img src="examples/images/exports/bp_amplitude.png" width="300"> <img src="examples/images/exports/bp_phase.png" width="300">
+<img src="images/exports/bp_amplitude.png" width="300"> <img src="images/exports/bp_phase.png" width="300">
 
 Reconstructed Amplitude and phase images obtained by MHPR method using 8 axially displaced holograms:
 
-<img src="examples/images/exports/mhpr_amplitude.png" width="300"> <img src="examples/images/exports/mhpr_phase.png" width="300">
+<img src="images/exports/mhpr_amplitude.png" width="300"> <img src="images/exports/mhpr_phase.png" width="300">

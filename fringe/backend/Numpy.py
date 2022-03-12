@@ -1,4 +1,4 @@
-from fringe.backend.core import CoreFunctions
+from ..backend.core import CoreFunctions
 import numpy as np
 
 
@@ -20,25 +20,17 @@ class Numpy(CoreFunctions):
         return np.sum(input_, axis=axis)
 
     @staticmethod
-    def slice(input_, indices, batch_dim):
-        slc = tuple([slice(None)] * input_.ndim)
-        for i in range[len(slc)]:
-            if i != batch_dim:
-                slc[i] = indices
-        return input_[slc]
-
-    @staticmethod
     def pad(input_, padding, fill_value):
         return np.pad(input_, padding, mode="constant", constant_values=fill_value)
 
     @staticmethod
     def unpad(input_, padding):
         shape = input_.shape
-        slc = tuple([slice(None)] * input_.ndim)
+        slc = [slice(None)] * input_.ndim
         for i, p in enumerate(padding):
             n = shape[i] - p[1]
             slc[i] = slice(p[0], n) if p[0] != 0 else slc[i]
-        return input_[slc]
+        return input_[tuple(slc)]
 
     @staticmethod
     def abs(input_):
