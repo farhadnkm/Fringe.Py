@@ -1,28 +1,31 @@
-# Diffraction and Coherent Propagation
-A computational implementation of coherent propagation of complex fields, all written in Python.
+# Fringe.Py
 
+A coherent propagation and diffraction simulation tool, all written in Python. 
+
+In this package, a set of utilities are provided to simulate coherent signal propagation. It is particularly made for free-space optical propagation, diffraction, and holography. However, the tools are compatible with 1D and 2D data structures and can be potentially used for any sort of spatially-coherent signals.
+
+-----
+
+<p align="center">
+    <img src="examples/images/exports/propagation_anim.gif" width="500">
+<p>
+
+    
 ## What's inside?
-In this package, a set of utilities are provided to simulate coherent signal propagation and diffraction. It is particularly made for free-space optical propagation and holography. However, the tools are compatible with 1D and 2D data structures and can be potentially used for any sort of spatially-coherent signals.
 
-It is intended to be modular and simple to understand. The codes are GPU-friendly, and they support batch processing. Angular spectrum algorithm is the primary work horse for signal propagtion though any custom solver could be given. Aside Numpy and TensorFlow backends which are provided with the package, any computational means could be implemented to process tensor operations.
+A set of modules are provided to solve the scalar diffraction problem. The codes are GPU-friendly, compatible with well-known computation libraries (Numpy, TensorFlow) and they support batch processing. Using the TensorFlow backend, computations become autograd-compatible and could be mounted on machine learning models. Angular spectrum algorithm is the primary work horse for field propagation though other custom solvers could be used. Aside the built-in Numpy and TensorFlow backends, any computational means could be employed to process tensor operations.
 
 It also includes:
-- a simple yet useful data pipeline which supports images only.
-- Gerchberg-Saxton multi-distance phase recovery algorithm. It can be easily tweaked to support other variations of signal e.g. wavelength.
+- a simple yet useful data pipeline to load and standardize data. For now, it only supports images.
+- Gerchberg-Saxton multi-distance phase recovery algorithm. It can be easily tweaked to support other variations of signal e.g. by wavelength.
 
 ## Installation
 To install the package, run:
 ```
 python -m pip install fringe
-<<<<<<< HEAD
-=======
 ```
-The example files are not included in the package. To import them, clone the repository. In the git bash, run:
-```
-$ git clone https://github.com/farhadnkm/Fringe.Py
->>>>>>> 5bf76ba15b5f35a6c28f9681578d8f1f17659458
-```
-The example files are not included in the package and should be downloaded separately. Also they require *matplotlib* to show plots.
+Fringe requires ```numpy```, ```tensorflow 2.x```, and ```scikit_image```.
+The example files are not included in the package and should be downloaded separately. Also they require ```matplotlib``` to show plots.
 
 ## How to Use
 1. Import or create data
@@ -45,27 +48,25 @@ obj = import_image("images/squares.png", preprocessor=[p1, p2, p3])
 
 *Solvers* contain propagation algorithms and can be called by *solver.solve*. In particular, angular Spectrum algorithm convolves the input field with a free-space propagtor function which depends on *wavelength λ* (or *wavenumber k=2π/λ*) and distance *z*.
 ```
+from numpy import pi, abs, angle
 from fringe.solvers.AngularSpectrum import AngularSpectrumSolver as AsSolver
 
 solver = AsSolver(shape=obj.shape, dr=1, is_batched=False, padding="same", pad_fill_value=0, backend="Numpy")
-rec = solver.solve(hologram, k=2*np.pi/500e-3, z=-300)
-amp, phase = np.abs(rec), np.angle(rec)
+rec = solver.solve(hologram, k=2*pi/500e-3, z=-1000)
+amp, phase = abs(rec), angle(rec)
+
+ax = pyplot.sublots(2, 1, 1)
+ax[0].imshow(abs(obj))
+ax[1].imshow(amp)
+pyplot.show()
 ```
 
+<p align="center">
+    <img src="examples/images/exports/squares_1.png" width="300"> <img src="examples/images/exports/squares_2.png" width="300">
+<p>
 
+Example notebooks provide further details with 1D and 2D diffraction, GPU acceleration, batch processing, and phase recovery.
 
-Example notebooks provide further details with 1D and 2D signal propagtion, GPU acceleration and batch processing, and phase recovery.
+##License
 
-## Outcomes
-
-A Hologram:
-
-<img src="images/hologram_preview.png" width="300">
-
-Reconstructed Amplitude and phase images obtained by back propagation:
-
-<img src="images/exports/bp_amplitude.png" width="300"> <img src="images/exports/bp_phase.png" width="300">
-
-Reconstructed Amplitude and phase images obtained by MHPR method using 8 axially displaced holograms:
-
-<img src="images/exports/mhpr_amplitude.png" width="300"> <img src="images/exports/mhpr_phase.png" width="300">
+Fringe is released under the MIT license. See LICENSE for details.
