@@ -14,6 +14,13 @@ It also includes:
 To install the package, run:
 ```
 python -m pip install fringe
+<<<<<<< HEAD
+=======
+```
+The example files are not included in the package. To import them, clone the repository. In the git bash, run:
+```
+$ git clone https://github.com/farhadnkm/Fringe.Py
+>>>>>>> 5bf76ba15b5f35a6c28f9681578d8f1f17659458
 ```
 The example files are not included in the package and should be downloaded separately. Also they require *matplotlib* to show plots.
 
