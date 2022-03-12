@@ -21,9 +21,11 @@ It also includes:
 
 ## Installation
 To install the package, run:
+
 ```
 python -m pip install fringe
 ```
+
 Fringe requires ```numpy```, ```tensorflow 2.x```, and ```scikit_image```.
 The example files are not included in the package and should be downloaded separately. Also they require ```matplotlib``` to show plots.
 
@@ -31,23 +33,28 @@ The example files are not included in the package and should be downloaded separ
 1. Import or create data
 
 For images:
-```
+
+```python
 import numpy as np
 from fringe.utils.io import import_image
 from fringe.utils.modifiers import ImageToArray, Normalize, MakeComplex
 ```
+
 Images need to be standardized, normalized, and casted to complex data type. *Modifiers* are tools made for this purpose which apply these operations on import.
-```
+
+```python
 p1 = ImageToArray(bit_depth=16, channel='gray', crop_window=None, dtype='float32')
 p2 = Normalize(background=np.ones((512, 512)))
 p3 = MakeComplex(set_as='amplitude', phase=0)
 
 obj = import_image("images/squares.png", preprocessor=[p1, p2, p3])
 ```
+
 2. Propagate
 
 *Solvers* contain propagation algorithms and can be called by *solver.solve*. In particular, angular Spectrum algorithm convolves the input field with a free-space propagtor function which depends on *wavelength λ* (or *wavenumber k=2π/λ*) and distance *z*.
-```
+
+```python
 from numpy import pi, abs, angle
 from fringe.solvers.AngularSpectrum import AngularSpectrumSolver as AsSolver
 
