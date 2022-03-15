@@ -61,7 +61,7 @@ def import_image_seq(paths, modifiers=None, *args, **kwargs):
     return imgs
 
 
-def export_image(image, path, dtype='uint16', verbose=True):
+def export_image(image, path, dtype='uint8', verbose=True):
     """
     Exports a given image array to the specified path.
 

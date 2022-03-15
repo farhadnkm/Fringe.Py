@@ -5,44 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14316d6c-8e6c-48d9-a86c-ebeed3a3498f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/fringe/solvers/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HISTORY.rst" beforeDir="false" afterPath="$PROJECT_DIR$/HISTORY.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/GPU_batch.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/GPU_batch.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/diffraction.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/diffraction.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/images/amplitude.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/images/exports/bp_amplitude.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/images/exports/bp_phase.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/images/exports/mhpr_amplitude.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/images/exports/mhpr_phase.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/images/exports/mhpr_phase_colored.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/images/hologram_preview.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/images/phase.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/images/sequence/0_300.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/images/sequence/1_350.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/images/sequence/2_400.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/images/sequence/3_450.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/images/sequence/4_500.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/images/sequence/5_550.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/images/sequence/6_600.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/images/sequence/7_650.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/phase_recovery.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/phase_recovery.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/backend/Numpy.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/backend/Numpy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/backend/TensorFlow.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/backend/TensorFlow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/backend/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/backend/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/backend/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/backend/core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/modules/PhaseRecovery.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/modules/PhaseRecovery.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/modules/Scanner.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/modules/Scanner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/modules/Simulator.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/modules/Simulator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/modules/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/modules/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/solvers/AngularSpectrum.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/solvers/AngularSpectrum.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/solvers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/solvers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/utils/io.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/utils/io.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/utils/modifiers.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/utils/modifiers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +234,7 @@
       <workItem from="1646931421264" duration="6131000" />
       <workItem from="1646948159137" duration="1791000" />
       <workItem from="1646980321972" duration="22773000" />
-      <workItem from="1647074464080" duration="601000" />
+      <workItem from="1647074464080" duration="2530000" />
     </task>
     <servers />
   </component>
