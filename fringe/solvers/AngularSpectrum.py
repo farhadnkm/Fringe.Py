@@ -1,12 +1,12 @@
 from typing import Union
-from ..solvers.base import Solver
-import fringe.backend as bnd
-
+from . import base
+from ..backend.core import CoreFunctions
+from ..backend.Numpy import Numpy
+from ..backend.TensorFlow import TensorFlow
 import numpy
 _PI = numpy.pi
 
-
-class AngularSpectrumSolver(Solver):
+class AngularSpectrumSolver(base.Solver):
     def __init__(self, shape, dr: Union[float, tuple, list], is_batched, padding: Union[str, list, None] = None, pad_fill_value=0, backend='TensorFlow'):
         """
         Angular Spectrum Solver class. On initialization, static parameters are defined. To propagate fields, call the
@@ -36,9 +36,9 @@ class AngularSpectrumSolver(Solver):
              from backend.core.CoreFunctions could be compatible as well.
         """
         if isinstance(backend, str):
-            self.backend = {'tensorflow': bnd.TensorFlow.TensorFlow,
-                            'numpy': bnd.Numpy.Numpy}[backend.lower()]
-        elif issubclass(backend, bnd.core.CoreFunctions):
+            self.backend = {'tensorflow': TensorFlow,
+                            'numpy': Numpy}[backend.lower()]
+        elif issubclass(backend, CoreFunctions):
             self.backend = backend
         else:
             raise ValueError("The given backend is not an instance of backend.core.CoreFunctions or is not one of the "
