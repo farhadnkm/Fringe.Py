@@ -1,4 +1,11 @@
+
+
 # Fringe.Py
+
+[![GitHub version](https://badge.fury.io/gh/farhadnkm%2FFringe.Py.svg)](https://badge.fury.io/gh/farhadnkm%2FFringe.Py)
+[![PyPI version](https://badge.fury.io/py/fringe.svg)](https://badge.fury.io/py/fringe)
+[![DOI](https://zenodo.org/badge/327240077.svg)](https://zenodo.org/badge/latestdoi/327240077)
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/farhadnkm/Fringe.Py/blob/master/LICENSE)
 
 A coherent propagation and diffraction simulation tool, all written in Python. 
 
