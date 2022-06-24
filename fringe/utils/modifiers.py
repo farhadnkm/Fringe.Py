@@ -28,7 +28,7 @@ class ImageToArray(Modifier):
         self.crop = crop_window
         self.dtype = dtype
 
-    def process(self, img):
+    def process(self, img, *args, **kwargs):
         if len(np.shape(img)) == 2:
             if self.chan in ['r', 'g', 'b', 'rgb']:
                 raise AssertionError('The image is grayscale but your expecting an RGB image.')
@@ -70,7 +70,7 @@ class Normalize(Modifier):
         self.bg = background
         self.bg[self.bg <= 1e-8] = 1e-8
 
-    def process(self, img):
+    def process(self, img, *args, **kwargs):
         _img = np.copy(img)
         if self.bg is not None:
             _img /= self.bg

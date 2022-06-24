@@ -6,6 +6,7 @@ from ..backend.TensorFlow import TensorFlow
 import numpy
 _PI = numpy.pi
 
+
 class AngularSpectrumSolver(base.Solver):
     def __init__(self, shape, dr: Union[float, tuple, list], is_batched, padding: Union[str, list, None] = None, pad_fill_value=0, backend='TensorFlow'):
         """
@@ -196,7 +197,6 @@ class AngularSpectrumSolver(base.Solver):
 
         :return: Complex-valued angular spectrum of the input field.
         """
-
         if len(input_.shape) != len(self.padding):
             raise ValueError("Input shape is incompatible.")
 
