@@ -2,7 +2,7 @@ import numpy as np
 from skimage import io
 
 
-def import_image(path, modifiers=None, *args, **kwargs):
+def import_image(path, modifiers=None, verbose=False, *args, **kwargs):
     """
     Imports an image specified by path.
 
@@ -22,13 +22,13 @@ def import_image(path, modifiers=None, *args, **kwargs):
     """
     img = io.imread(path)
 
-    if kwargs.get('Verbose', True):
+    if verbose:
         print("Image imported from:", path)
 
     if modifiers is not None:
         if hasattr(modifiers, '__iter__'):
-            for pp in modifiers:
-                img = pp.process(img=img, *args, **kwargs)
+            for m in modifiers:
+                img = m.process(img=img, *args, **kwargs)
 
         else:
             img = modifiers.process(img=img, *args, **kwargs)
@@ -36,7 +36,7 @@ def import_image(path, modifiers=None, *args, **kwargs):
     return img
 
 
-def import_image_seq(paths, modifiers=None, *args, **kwargs):
+def import_image_seq(paths, modifiers=None, verbose=False, *args, **kwargs):
     """
     Imports a sequence of images for a given list of paths.
 
@@ -56,7 +56,7 @@ def import_image_seq(paths, modifiers=None, *args, **kwargs):
     """
     imgs = []
     for path in paths:
-        img = import_image(path, modifiers, *args, **kwargs)
+        img = import_image(path, modifiers, verbose, *args, **kwargs)
         imgs.append(img)
     return imgs
 

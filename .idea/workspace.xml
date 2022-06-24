@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14316d6c-8e6c-48d9-a86c-ebeed3a3498f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/backend/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/backend/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/GPU_batch.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/GPU_batch.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/diffraction.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/diffraction.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/phase_recovery.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/phase_recovery.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fringe/solvers/AngularSpectrum.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/solvers/AngularSpectrum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/utils/io.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/utils/io.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fringe/utils/modifiers.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/utils/modifiers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +25,17 @@
         <option value="Jupyter Notebook" />
         <option value="Python Script" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -237,7 +251,9 @@
       <workItem from="1646948159137" duration="1791000" />
       <workItem from="1646980321972" duration="22773000" />
       <workItem from="1647074464080" duration="2530000" />
-      <workItem from="1647337251813" duration="428000" />
+      <workItem from="1647337251813" duration="3070000" />
+      <workItem from="1648026551680" duration="2574000" />
+      <workItem from="1656051688406" duration="4076000" />
     </task>
     <servers />
   </component>
@@ -262,7 +278,7 @@
     </ignored-roots>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Fringe$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1647337586806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Fringe$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1656102994260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Holographic_Reconstruction$Main_MHPR.coverage" NAME="Main_MHPR Coverage Results" MODIFIED="1610450508744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Fringe$dummy.coverage" NAME="dummy Coverage Results" MODIFIED="1632499612990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Holographic_Reconstruction$SimulateHologram.coverage" NAME="SimulateHologram Coverage Results" MODIFIED="1610267644595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
