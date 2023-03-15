@@ -95,6 +95,6 @@ def export_image(image, path, dtype='uint8', verbose=True):
         _img *= 2 ** 16 - 1
         _img = np.uint16(_img)
 
-    io.imsave(path, _img)
+    io.imsave(path, _img, check_contrast=False)
     if verbose:
         print("Image exported to:", path)
