@@ -2,6 +2,7 @@
 test*
 propagation_anim.py
 gif_maker.py
+Update Check List.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

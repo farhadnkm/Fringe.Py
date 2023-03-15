@@ -157,8 +157,12 @@ class AngularSpectrumSolver(base.Solver):
 
         :return: Complex-valued free-space propagator tensor with the shape of the input tensor (independent of batch size).
         """
-        return self.backend.exp(self.backend.complex(real=self.backend.zeros_like(self.kt2),
-                                                     imag=self.backend.sqrt(k*k - self.kt2) * z))
+        k2_kt2 = k * k - self.kt2
+        sqk2_kt2 = self.backend.sqrt(self.backend.abs(k2_kt2))
+        cs = self.backend.where(k2_kt2 >= 0,
+                                self.backend.complex(real=self.backend.zeros_like(self.kt2), imag=sqk2_kt2 * z),
+                                self.backend.complex(real=-sqk2_kt2 * z, imag=self.backend.zeros_like(self.kt2)))
+        return self.backend.exp(cs)
 
     def transfer_function(self, k, z):
         """

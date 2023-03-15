@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14316d6c-8e6c-48d9-a86c-ebeed3a3498f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/GPU_batch.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/GPU_batch.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/diffraction.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/diffraction.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/phase_recovery.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/phase_recovery.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HISTORY.rst" beforeDir="false" afterPath="$PROJECT_DIR$/HISTORY.rst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fringe/solvers/AngularSpectrum.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/solvers/AngularSpectrum.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fringe/utils/io.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/utils/io.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fringe/utils/modifiers.py" beforeDir="false" afterPath="$PROJECT_DIR$/fringe/utils/modifiers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/setup.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +253,10 @@
       <workItem from="1647074464080" duration="2530000" />
       <workItem from="1647337251813" duration="3070000" />
       <workItem from="1648026551680" duration="2574000" />
-      <workItem from="1656051688406" duration="4076000" />
+      <workItem from="1656051688406" duration="6539000" />
+      <workItem from="1656147761847" duration="139000" />
+      <workItem from="1677158250777" duration="108000" />
+      <workItem from="1678894250849" duration="1263000" />
     </task>
     <servers />
   </component>

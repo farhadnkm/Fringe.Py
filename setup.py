@@ -14,7 +14,7 @@ with open('requirements.txt') as req_file:
 
 setup(
     name='fringe',
-    version='1.0.3',
+    version='1.0.5',
     description="Python implementation of computational optical propagation and digital holography.",
     long_description=readme + '\n\n' + history,
     long_description_content_type='text/markdown',
@@ -31,6 +31,8 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
         'Topic :: Scientific/Engineering :: Image Processing'
     ],
     keywords='diffraction, angular spectrum, holography, holograms, phase recovery,',

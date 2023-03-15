@@ -14,3 +14,10 @@ History
 ------------------
 * Minor bugs fixed
 
+0.0.5 (2023-03-15)
+------------------
+* AngularSpectrum.py
+    Propagator issue for small pixels is resolved
+    Near field propagation is now supported
+* io.py
+    skimage warnings io is fixed.
