@@ -75,7 +75,7 @@ class AngularSpectrumSolver(base.Solver):
                 else:
                     self.padding += [[0, 0]]
 
-                self.dr += [dr] if (type(dr) is float or type(dr) is int) else dr[i]
+                self.dr += [dr] if (type(dr) is float or type(dr) is int) else [dr[i]]
                 self.shape_f.append(shape[i] + self.padding[i][0] + self.padding[i][1])
                 self.data_dim.append(i)
                 self.data_length += 1

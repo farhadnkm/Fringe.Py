@@ -21,3 +21,8 @@ History
     Near field propagation is now supported
 * io.py
     skimage warnings io is fixed.
+
+0.0.6 (2023-03-16)
+------------------
+* AngularSpectrum.py
+    Bug fixed
