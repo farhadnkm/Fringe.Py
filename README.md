@@ -17,7 +17,7 @@ In this package, a set of utilities are provided to simulate coherent signal pro
     <img src="examples/images/exports/propagation_anim.gif" width="500">
 <p>
 
-    
+
 ## What's inside?
 
 A set of modules are provided to solve the scalar diffraction problem. The codes are GPU-friendly, compatible with well-known computation libraries (Numpy, TensorFlow) and they support batch processing. Using the TensorFlow backend, computations become autograd-compatible and could be mounted on machine learning models. Angular spectrum algorithm is the primary work horse for field propagation though other custom solvers could be used. Aside the built-in Numpy and TensorFlow backends, any computational means could be employed to process tensor operations.
