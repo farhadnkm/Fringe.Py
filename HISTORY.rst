@@ -26,3 +26,8 @@ History
 ------------------
 * AngularSpectrum.py
     Bug fixed
+
+0.0.7 (2023-03-16)
+------------------
+* AngularSpectrum.py
+    Positive real exponential bug fixed

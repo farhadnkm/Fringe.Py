@@ -161,7 +161,7 @@ class AngularSpectrumSolver(base.Solver):
         sqk2_kt2 = self.backend.sqrt(self.backend.abs(k2_kt2))
         cs = self.backend.where(k2_kt2 >= 0,
                                 self.backend.complex(real=self.backend.zeros_like(self.kt2), imag=sqk2_kt2 * z),
-                                self.backend.complex(real=-sqk2_kt2 * z, imag=self.backend.zeros_like(self.kt2)))
+                                self.backend.complex(real=-sqk2_kt2 * self.backend.abs(z), imag=self.backend.zeros_like(self.kt2)))
         return self.backend.exp(cs)
 
     def transfer_function(self, k, z):
@@ -178,10 +178,10 @@ class AngularSpectrumSolver(base.Solver):
 
         :return: Complex-valued OTF tensor with the shape of the input tensor (independent of batch size).
         """
-        mask = self.band_limit_mask(k, z)
+        #mask = self.band_limit_mask(k, z)
         p = self.propagator(k, z)
-        p_m = self.backend.where(mask > 0, p, 0)
-        return p_m
+        #p_m = self.backend.where(mask > 0, p, 0)
+        return p
 
     def solve(self, input_, k, z):
         """
